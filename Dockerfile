@@ -1,4 +1,4 @@
-FROM node:8.9
+FROM node:lts-buster-slim
 RUN mkdir /code
 WORKDIR /code
 ADD package.json /code/
@@ -15,5 +15,5 @@ COPY sshd_config /etc/ssh/
 COPY init.sh /usr/local/bin/
 RUN chmod u+x /usr/local/bin/init.sh
 
-EXPOSE 3001 2222
+EXPOSE 3000 2222
 ENTRYPOINT ["/usr/local/bin/init.sh"]

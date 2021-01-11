@@ -1,12 +1,12 @@
 var express = require('express');
 
 // Constants
-var PORT = process.env.PORT || 3001;
+var PORT = process.env.PORT || 3000;
 
 // App
 var app = express();
 app.get('/', function (req, res) {
-  res.send('Hello World from NodeJS');
+  res.send('Hello World from NodeJS LTS version');
 });
 
 app.listen(PORT)
